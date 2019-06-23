@@ -1,0 +1,38 @@
+{
+  "name": "typescript-project",
+  "version": "1.0.0",
+  "description": "This is my personal typescript project with all of learning knowledge for a while",
+  "main": "index.ts",
+  "repository": "git@github.com:wesilios/typescript-project.git",
+  "author": "Que Nguyen <quenguyen10190@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "yarn type-check -- --watch",
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
+    "dev": "webpack-dev-server",
+    "clean": "rimraf dist && rimraf lib",
+    "bundle": "yarn clean && webpack"
+  },
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.2.3",
+    "@babel/core": "7.4.0",
+    "@babel/plugin-proposal-class-properties": "7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "7.4.0",
+    "@babel/preset-env": "7.4.1",
+    "@babel/preset-typescript": "7.3.3",
+    "babel-loader": "8.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.3",
+    "typescript": "3.3.3",
+    "webpack": "^4.35.0",
+    "webpack-cli": "^3.3.4",
+    "webpack-dev-server": "^3.7.2"
+  }
+}

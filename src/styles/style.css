@@ -1,0 +1,136 @@
+body {
+  font-family: 'Muli', sans-serif;
+  padding-top: 25px;
+}
+
+body .btn.btn-buy {
+  border: 1px solid #FD0052;
+  padding: 10px 15px;
+  background-color: #FD0052;
+  color: #ffffff;
+  font-family: 'Muli Extra Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: 100%;
+}
+
+body .btn.btn-pink {
+  border: 1px solid #FD0052;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #FD0052;
+  font-family: 'Muli Extra Bold', sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  width: 100%;
+}
+
+body .btn.btn-pink:hover,
+body .btn.btn-pink:focus,
+body .btn.btn-pink:active {
+  border: 1px solid #ffffff;
+  background-color: #FD0052;
+  color: #ffffff;
+}
+
+body .btn.btn-pink.active {
+  border: 1px solid #ffffff;
+  background-color: #FD0052;
+  color: #ffffff;
+}
+
+section.control #totalPrice {
+  color: #000066;
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 800;
+  text-align: center;
+}
+
+.col-4-custom {
+  -ms-flex: 0 0 33.333333%;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  position: relative;
+  width: 100%;
+  padding-right: 0;
+  padding-left: 8px;
+}
+
+.col-4-custom:first-child {
+  padding-left: 15px;
+}
+
+.col-4-custom:last-child {
+  padding-right: 15px;
+  padding-left: 8px;
+}
+
+section.control {
+  margin-bottom: 20px;
+}
+
+section.benefits .title {
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 800;
+  color: #000066;
+}
+
+section.benefits .title.right {
+  font-size: 15px;
+  margin-bottom: 15px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 800;
+  color: #000066;
+  text-align: right;
+}
+
+section.benefits .content {
+  width: 100%;
+}
+
+section.benefits .name {
+  font-size: 13px;
+  line-height: 20px;
+}
+
+section.benefits .description {
+  font-size: 10px;
+  line-height: 15px;
+  color: #848484;
+  margin: 5px 0;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+section.benefits .price {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: right;
+}
+
+section.benefits .benefit {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+section.benefits .more {
+  text-align: center;
+  color: #FD0052;
+}
+
+i.fas {
+  transition: all .5s ease;;
+  -moz-transition: all .5s ease;;
+  -webkit-transition: all .5s ease;
+  -o-transition: all .5s ease;
+}

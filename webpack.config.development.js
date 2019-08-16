@@ -2,9 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const port = process.env.PORT || 3000;
 
+const VENDRO_LIBS = ['axios', 'lodash', 'faker'];
+
 module.exports = {
-  mode:'development',
-  entry: './src/index.ts',
+  mode: 'development',
+  entry: {
+    index: './src/index.ts',
+    vendor: VENDRO_LIBS
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'app.[hash].js'
@@ -18,6 +23,10 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader','css-loader']
       }
     ],
   },
@@ -28,7 +37,7 @@ module.exports = {
   ],
   optimization: {
     splitChunks: {
-      chunks: 'async',
+      chunks: 'all',
       minSize: 30000,
       maxSize: 0,
       minChunks: 1,

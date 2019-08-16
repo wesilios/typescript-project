@@ -13,12 +13,14 @@
     "build": "yarn build:types && yarn build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir lib --extensions \".ts,.tsx\" --source-maps inline",
-    "dev": "webpack-dev-server",
+    "dev": "webpack-dev-server --config webpack.config.development.js",
     "clean": "rimraf dist && rimraf lib",
-    "bundle": "yarn clean && webpack"
+    "bundle": "yarn clean && webpack -p --config webpack.config.production.js"
   },
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.19.0",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.13"
   },
   "devDependencies": {
     "@babel/cli": "7.2.3",
@@ -28,11 +30,18 @@
     "@babel/preset-env": "7.4.1",
     "@babel/preset-typescript": "7.3.3",
     "babel-loader": "8.0.4",
+    "css-loader": "^3.0.0",
+    "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^3.2.0",
+    "postcss-loader": "^3.0.0",
     "rimraf": "^2.6.3",
+    "style-loader": "^0.23.1",
+    "typed-css-modules": "^0.5.1",
     "typescript": "3.3.3",
+    "typings-for-css-modules-loader": "^1.7.0",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.4",
-    "webpack-dev-server": "^3.7.2"
+    "webpack-dev-server": "^3.7.2",
+    "webpack-shell-plugin": "^0.5.0"
   }
 }
